@@ -14,7 +14,7 @@ contract WRTW is ERC20 {
     }
 
     function deposit() public payable {
-        _mint(msg.sender, msg.value);
+        mint(msg.sender, msg.value);
         emit Deposit(msg.sender, msg.value);
     }
 

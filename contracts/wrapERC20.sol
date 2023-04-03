@@ -9,9 +9,9 @@ contract WRTW is ERC20 {
 
     constructor() ERC20("Remake", "RTW") {}
 
-    fallback() external payable {
-        deposit();
-    }
+    // fallback() external payable {
+    //       deposit();
+    //   }
 
     function deposit() public payable {
         mint(msg.sender, msg.value);

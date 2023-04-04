@@ -7,7 +7,9 @@ contract WRTW is ERC20 {
     event Deposit(address indexed account, uint amount);
     event Withdraw(address indexed account, uint amount);
 
-    constructor() ERC20("Remake", "RTW") {}
+    constructor() ERC20("TOKEN", "TK") {
+        mint(address(this), 1000);
+    }
 
     // fallback() external payable {
     //       deposit();

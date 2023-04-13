@@ -11,12 +11,10 @@ contract WRTW is ERC20 {
         mint(address(this), 1000);
     }
 
-    // fallback() external payable {
-    //       deposit();
-    //   }
-
     function deposit() public payable {
+        require(msg.value <= 1, "you can deposit only one");
         mint(msg.sender, msg.value);
+
         emit Deposit(msg.sender, msg.value);
     }
 
